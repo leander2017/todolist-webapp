@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Letters</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+  
+  <div class="day-or-week-container">
+      <div class="day-or-week highlight">
+        <a href="/"> <img class="picture" src="images/today.png" alt="Daily"> </a>
+      </div>
+      <div class="day-or-week">
+        <a href="/work"> <img class="picture" src="images/work.png" alt=""> </a>
+      </div>
+  </div>
+  
+  <div class="title">
+    <h1><%= date %></h1>
+    <div class="up"> <%= today %> </div>
+  </div>
+
+  <div  class="main-container">
+
+      <div class="input-field">
+
+        <div class="task-creation"> 
+
+          <h2>New Task</h2>
+
+          <div class="add-new">
+
+            <form  action="/submit" method="POST">
+              <input class="highlight-input distance-right" type="text" name="todo" placeholder="What's to do?" required>
+              <input class="highlight-input" type="submit" value="Add to List">
+            </form>
+
+          </div>
+
+        </div>
+
+        <div class="list-manager">
+
+          <h2>List Manager</h2>
+
+          <div class="manager-field">
+
+            <form  action="/getTimeStamp" method="POST">
+              <input class="highlight-input" type="submit" value="Get Timestamps">
+            </form>
+
+            <form action="/removeTimeStamp" method="POST">
+              <input class="highlight-input" type="submit" value="Remove Timestamps">
+            </form>
+
+            <form action="/refreshList" method="POST">
+              <input class="highlight-input" type="submit" value="Refresh">
+            </form>
+
+            <form action="/deleteAll" method="POST">
+              <input class="highlight-input" type="submit" value="Delete List">
+            </form>
+
+          </div>
+
+        </div>  
+
+      </div>
+
+           <!-- background-color: rgb(47, 212, 227); -->  
+
+    <% for (let i = list.length -1; i >= 0; i--) { %>
+
+      <div  class="task-container"> 
+
+        <div class="text-div"><p class="task-font"><%-list[i]["text"]%> <%=list[i]["startTime"]%> <%=list[i]["endTime"]%></p></div> 
+
+        <div class="button-div">
+
+          <form action="/done" method="POST">    
+            <input  class="hidden" type="text" value="<%= list[i]["timeStamp"] %>" name="task">  
+            <input class="input-icon-done highlight-input" type="submit" value=""> 
+          </form>
+ 
+          <form action="/undone" method="POST">    
+            <input class="hidden" type="text" value="<%= list[i]["timeStamp"] %>" name="task">  
+            <input class="input-icon-undone highlight-input" type="submit" value=""> 
+          </form>
+               
+          <form action="/remove" method="POST">
+            <input  class="hidden" type="text" value="<%= list[i]["timeStamp"] %>" name="removeButton">
+            <input class="input-icon-remove highlight-input" type="submit" value="">
+          </form>
+
+        </div>
+
+      </div> 
+    <% } %>
+
+  </div> <!--main-container-->
+
+    <%- include("partials/footer.ejs") %>
+
+</body>
+
+
+
+
+
+</html>

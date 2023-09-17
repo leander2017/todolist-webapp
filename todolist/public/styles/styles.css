@@ -1,0 +1,350 @@
+body{
+    background-image: url("../images/plant_green.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.up {
+    margin-left: 0.2rem;
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    vertical-align: super;
+    
+}
+
+.title {
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border: solid yellow 0px;
+}
+
+h1{
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    font-size: 3rem;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: rgb(226, 226, 226);
+}
+
+h2 {
+    align-self: center;
+    font-size: 2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    margin: 1rem;
+    color: rgb(226, 226, 226);
+}
+
+.personal-footer {
+    align-self: center;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 2.9rem;
+    background-color: white;
+    opacity: 0.6;
+    border-radius: 10px;
+    margin-top: 1.3rem;
+    margin-bottom: 0.6rem;
+    border: solid black 1px;
+}
+
+.footer-element{
+    font-size: 0.7rem;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.footer-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0.2rem 0.3rem 0.1rem 0.3rem;
+}
+
+.day-or-week-container{
+    align-self: self-end; 
+    display: flex;
+    gap: 0.4rem;
+    margin: 1rem 1rem 0 1rem;
+}
+
+.day-or-week{
+    background-color: white;
+    opacity: 0.6;
+    border-radius: 10px;
+    border: solid black 1px;
+    padding: 0.2rem;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.highlight {
+    opacity: 0.85;
+}
+
+.day-or-week:hover {
+  background-color: white; /* Ändere die Hintergrundfarbe bei Hover */
+  opacity: 0.9; /* Ändere die Opazität bei Hover */
+}
+
+
+
+
+.picture {
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+.task-font {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.0rem;
+}
+
+.main-container{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    border: solid orange 0px;
+}
+
+.input-field {
+    display: flex;
+    justify-content: space-between;
+    
+    margin-bottom: 1rem;
+    border: solid rgb(255, 0, 0) 0px;
+}
+
+.task-creation{
+    display: flex;
+    flex-direction: column;
+    border: solid rgb(0, 26, 255) 0px;
+}
+
+.add-new{
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    border: solid green 0px;
+}
+
+.distance-right {
+    margin-right: 0.15rem;
+}
+
+.list-manager {
+    display: flex;
+    flex-direction: column;
+    border: solid rgb(0, 26, 255) 0px;
+    
+}
+
+.manager-field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    border: solid rgb(59, 0, 71) 0px;
+}
+
+.task-container{
+    min-height: 3rem;
+    display: flex;
+    gap: 0.2rem;
+    margin-top: 0.5rem;
+    border: solid rgb(0, 221, 255) 0px;
+}
+
+.button-div {
+    display: flex;
+    gap: 0.4rem;
+    border: solid rgb(155, 7, 7) 0px;
+}
+
+input {
+    min-height: 3rem;
+    min-width: 3rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-radius: 10px;
+    border: solid black 1px;
+    background-color: white;
+    opacity: 0.6;
+    color: solid black;
+    cursor: pointer;
+    padding: 0 0.4rem 0 0.4rem;
+    font-size: 0.7rem;
+    transition: background-color 0.3s, opacity 0.3s; /* Füge eine Übergangsanimation hinzu */
+}
+
+.input-icon-done {
+    padding: 0rem 3.5rem 0rem 0rem;  /* Platz für das Icon */
+    background: url("../images/done.png") center no-repeat; /* Hinzufügen des Icons als Hintergrundbild */
+    background-size: 1.7rem 1.7rem; /* Größe des Icons anpassen */
+    background-color: white;
+    opacity: 0.6;
+    color: solid black;
+    cursor: pointer;
+    font-size: 0.7rem;
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+
+  .input-icon-undone {
+    padding: 0rem 3.5rem 0rem 0rem;  /* Platz für das Icon */
+    background: url("../images/undone.png") center no-repeat; /* Hinzufügen des Icons als Hintergrundbild */
+    background-size: 1.6rem 1.6rem; /* Größe des Icons anpassen */
+    background-color: white;
+    opacity: 0.6;
+    color: solid black;
+    cursor: pointer;
+    font-size: 0.7rem;
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+
+  .input-icon-remove {
+    padding: 0rem 3.5rem 0rem 0rem;  /* Platz für das Icon */
+    background: url("../images/remove.png") center no-repeat; /* Hinzufügen des Icons als Hintergrundbild */
+    background-size: 2rem 2rem; /* Größe des Icons anpassen */
+    background-color: white;
+    opacity: 0.6;
+    color: solid black;
+    cursor: pointer;
+    font-size: 0.7rem;
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+
+.highlight-input:hover {
+    background-color: #e0e0e0; /* Ändere die Hintergrundfarbe bei Hover */
+    opacity: 0.9; /* Ändere die Opazität bei Hover */
+}
+
+.hidden{
+    display: none;
+}
+
+.text-div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-height: 3rem; 
+    border-radius: 10px;
+    border: solid black 1px;
+    opacity: 0.8;
+    background-color: white;
+    color: black;
+    margin-right: 0.4rem;
+    border: solid yellow 0px;
+    margin-bottom: 0.25rem;
+}
+
+p {
+    margin: 0.5rem;
+    padding: 0px;
+
+}
+
+
+
+@media (max-width: 1800px){
+    .main-container{
+        width: 50%;
+    }
+    .personal-footer {
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 1250px){
+    .main-container{
+        width: 60%;
+    }
+    .personal-footer {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1020px){
+    .main-container{
+        width: 75%;
+    }
+    .personal-footer {
+        width: 75%;
+    }
+}
+
+@media (max-width: 805px){
+    .main-container{
+        width: 90%;
+    }
+    .personal-footer {
+        width: 90%;
+    }
+}
+
+@media (max-width: 675px){
+    .input-field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        margin-bottom: 2rem;
+        border: solid rgb(255, 0, 0) 0px;
+    }
+    .main-container{
+        width: 98%;
+    }
+    .personal-footer {
+        width: 98%;
+    }
+    .day-or-week-container{
+        align-self: center; 
+        display: flex;
+        gap: 0.4rem;
+        margin: 1rem 1rem 0 1rem;
+    }
+
+    .picture {
+        height: 2.8rem;
+        width: 2.8rem;
+    }
+
+}
+
+@media (max-width: 520px){
+    h1{
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
+
+    .title {
+        margin-bottom: 2rem;
+    }
+
+    .footer-icon {
+        height: 1rem;
+        width: 1rem;
+        margin: 0.1rem 0.2rem 0.1rem 0.2rem;
+    }
+
+    .calendar-week{
+        font-size: 0.6rem;
+    }
+
+
+    .task-container{
+        flex-direction: column;
+        margin-bottom: 1rem;
+        
+    }
+
+    .button-div {
+        margin-top: 0.25rem;
+        justify-content: center;
+    }
+
+
+}
